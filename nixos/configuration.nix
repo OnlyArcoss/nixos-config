@@ -86,6 +86,10 @@
     };
   };
 
+  # Bootloader (BIOS legacy - pas d'UEFI sur cette VM)
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/sda";
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";
 }
