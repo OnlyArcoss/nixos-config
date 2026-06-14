@@ -9,6 +9,7 @@
 }: {
   imports = [
     ./hypr/hyprland.nix
+    ./packages.nix
   ];
 
   nixpkgs = {
@@ -22,13 +23,6 @@
     username = "arcoss";
     homeDirectory = "/home/arcoss";
     stateVersion = "25.11";
-
-    packages = with pkgs; [
-      kitty
-      waybar
-      wofi
-      hyprpaper
-    ];
   };
 
   programs.home-manager.enable = true;
