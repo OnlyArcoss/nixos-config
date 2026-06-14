@@ -24,6 +24,7 @@
       ".config/kitty/kitty.conf".source = ./kitty/kitty.conf;
       ".config/waybar".source = ./waybar;
       ".config/wofi".source = ./wofi;
+      "Documents/wallpapers".source = ./wallpapers;
     };
   };
 
