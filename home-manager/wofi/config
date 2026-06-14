@@ -1,0 +1,13 @@
+style = /home/arcoss/.config/wofi/menu.css
+width=630
+height=400
+location=center
+show=drun
+prompt=Apps
+allow_markup=true
+no_actions=true
+orientation=vertical
+insensitive=true
+allow_images=true
+image_size=40
+gtk_dark=true

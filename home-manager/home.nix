@@ -21,6 +21,9 @@
       ".config/hypr/hyprpaper.conf".source = ./hypr/hyprpaper.conf;
       ".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
       ".config/hypr/modules".source = ./hypr/modules;
+      ".config/kitty/kitty.conf".source = ./kitty/kitty.conf;
+      ".config/waybar".source = ./waybar;
+      ".config/wofi".source = ./wofi;
     };
   };
 
