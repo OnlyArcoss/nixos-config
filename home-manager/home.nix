@@ -11,13 +11,6 @@
     ./packages.nix
   ];
 
-  nixpkgs = {
-    overlays = [];
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   home = {
     username = "arcoss";
     homeDirectory = "/home/arcoss";
