@@ -88,7 +88,7 @@
 
   # Bootloader (BIOS legacy - pas d'UEFI sur cette VM)
     boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/sda";
+    boot.loader.grub.device = "/dev/vda";
 
     # Réseau
       networking.networkmanager.enable = true;
@@ -101,7 +101,7 @@
         enable = true;
         settings = {
           default_session = {
-            command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
+            command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
             user = "greeter";
           };
         };
