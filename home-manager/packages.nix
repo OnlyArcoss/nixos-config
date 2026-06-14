@@ -5,7 +5,7 @@
     wofi
     hyprpaper
     firefox
-    zed
+    zed-editor
     discord
     fastfetch
     btop
