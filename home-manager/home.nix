@@ -17,8 +17,10 @@
     stateVersion = "25.11";
 
     file = {
-      ".config/hypr/hyprland.conf".source = ./hypr/hyprland.conf;
+      ".config/hypr/hyprland.lua".source = ./hypr/hyprland.lua;
       ".config/hypr/hyprpaper.conf".source = ./hypr/hyprpaper.conf;
+      ".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
+      ".config/hypr/modules".source = ./hypr/modules;
     };
   };
 
