@@ -90,6 +90,36 @@
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "/dev/sda";
 
+    # Réseau
+      networking.networkmanager.enable = true;
+
+      # Hyprland
+      programs.hyprland.enable = true;
+
+      # Display manager
+      services.greetd = {
+        enable = true;
+        settings = {
+          default_session = {
+            command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
+            user = "greeter";
+          };
+        };
+      };
+
+      # Audio
+      security.rtkit.enable = true;
+      services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        pulse.enable = true;
+      };
+
+      # XDG portals
+      xdg.portal = {
+        enable = true;
+        extraPortals = [pkgs.xdg-desktop-portal-hyprland];
+      };
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.11";
 }

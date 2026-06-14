@@ -1,0 +1,8 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
+    hl.exec_cmd("waybar & hyprpaper")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("elephant service enable")
+    hl.exec_cmd("systemctl --user start elephant.service && walker --gapplication-service &")
+    hl.exec_cmd("swayosd-server")
+end)
