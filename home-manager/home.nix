@@ -25,8 +25,14 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Colloid-purple-Dark";
+      name = "Colloid-Purple-Dark";
       package = pkgs.colloid-icon-theme;
+    };
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      icon-theme = "Colloid-Purple-Dark";
     };
   };
 
