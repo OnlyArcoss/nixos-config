@@ -27,6 +27,5 @@
     obs-studio
     gnome-disk-utility
     keepassxc
-    vscode
   ];
 }
