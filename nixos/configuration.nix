@@ -122,7 +122,7 @@
       };
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
