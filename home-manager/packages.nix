@@ -11,5 +11,6 @@
     btop
     git
     vim
+    bibata-cursors
   ];
 }
