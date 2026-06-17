@@ -1,5 +1,13 @@
 -- monitors.lua
 
+-- Défaut pour tout écran non configuré
+hl.monitor({
+    output   = "",
+    mode     = "1920x1080@60",
+    position = "auto",
+    scale    = 1,
+})
+
 -- Moniteurs
 hl.monitor({
     output   = "HDMI-A-1",
