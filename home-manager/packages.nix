@@ -27,5 +27,6 @@
     obs-studio
     gnome-disk-utility
     keepassxc
+    colloid-icon-theme
   ];
 }
