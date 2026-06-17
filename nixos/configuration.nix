@@ -123,6 +123,11 @@
   programs.zsh.enable = true;
   users.users.arcoss.shell = pkgs.zsh;
 
+  programs.steam.enable = true;
+
+  virtualisation.docker.enable = true;
+  users.users.arcoss.extraGroups = ["wheel" "docker"];
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji

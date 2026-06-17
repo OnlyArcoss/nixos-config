@@ -18,5 +18,15 @@
     pamixer
     playerctl
     lazydocker
+    spotify
+    bruno
+    nautilus
+    google-chrome
+    chromium
+    vlc
+    obs-studio
+    gnome-disk-utility
+    keepassxc
+    vscode
   ];
 }
