@@ -1,12 +1,6 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{ inputs, lib, config, pkgs, ... }: {
   imports = [
     ./packages.nix
   ];
@@ -25,6 +19,14 @@
       ".config/waybar".source = ./waybar;
       ".config/wofi".source = ./wofi;
       "Documents/wallpapers".source = ./wallpapers;
+    };
+  };
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Colloid-purple-Dark";
+      package = pkgs.colloid-icon-theme;
     };
   };
 
