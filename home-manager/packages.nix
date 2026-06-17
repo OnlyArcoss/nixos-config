@@ -12,5 +12,11 @@
     git
     vim
     bibata-cursors
+    impala
+    bluetui
+    wiremix
+    pamixer
+    playerctl
+    lazydocker
   ];
 }

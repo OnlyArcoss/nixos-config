@@ -120,6 +120,9 @@
         enable = true;
         extraPortals = [pkgs.xdg-desktop-portal-hyprland];
       };
+  programs.zsh.enable = true;
+  users.users.arcoss.shell = pkgs.zsh;
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji

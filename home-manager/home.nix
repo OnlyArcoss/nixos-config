@@ -30,4 +30,11 @@
 
   programs.home-manager.enable = true;
   programs.git.enable = true;
+
+  programs.zsh.enable = true;
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
