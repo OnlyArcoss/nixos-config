@@ -104,13 +104,15 @@
         enable = true;
         wayland.enable = true;
         package = pkgs.kdePackages.sddm;
-        theme = "chili";
+        theme = "catppuccin-mocha-mauve";
         extraPackages = with pkgs; [
-          where-is-my-sddm-theme
+          (catppuccin-sddm.override {
+            flavor = "mocha";
+            accent = "mauve";
+          })
           kdePackages.qt5compat
         ];
       };
-      environment.systemPackages = [ pkgs.sddm-chili-theme ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
