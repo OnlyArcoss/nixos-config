@@ -100,15 +100,16 @@
       };
 
       # Display manager
-      services.xserver.enable = true;
-      services.displayManager.sddm = {
+      programs.regreet.enable = true;
+      services.greetd = {
         enable = true;
-        theme = "chili";
+        settings = {
+          default_session = {
+            command = "${pkgs.cage}/bin/cage -s -- ${pkgs.greetd.regreet}/bin/regreet";
+            user = "greeter";
+          };
+        };
       };
-      environment.systemPackages = with pkgs; [
-        sddm-chili-theme
-        qt5.qtgraphicaleffects
-      ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
