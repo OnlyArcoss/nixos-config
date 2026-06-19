@@ -103,7 +103,6 @@
       services.xserver.enable = true;
       services.displayManager.sddm = {
         enable = true;
-        wayland.enable = true;
         theme = "chili";
       };
       environment.systemPackages = [ pkgs.sddm-chili-theme ];
