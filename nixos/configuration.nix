@@ -97,9 +97,9 @@
       programs.hyprland.enable = true;
 
       # Display manager
+      services.xserver.enable = true;
       services.displayManager.sddm = {
         enable = true;
-        wayland.enable = true;
         theme = "chili";
         settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
       };
