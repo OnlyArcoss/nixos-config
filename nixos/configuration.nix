@@ -104,12 +104,12 @@
         enable = true;
         wayland.enable = true;
         package = pkgs.kdePackages.sddm;
-        theme = "catppuccin-mocha-mauve";
+        theme = "sddm-astronaut-theme";
         extraPackages = with pkgs; [
           kdePackages.qt5compat
         ];
       };
-      environment.systemPackages = [ pkgs.catppuccin-sddm ];
+      environment.systemPackages = [ pkgs.pkgs.sddm-astronaut ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
