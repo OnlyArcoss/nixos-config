@@ -27,6 +27,6 @@
     obs-studio
     gnome-disk-utility
     keepassxc
-    colloid-icon-theme
+    (colloid-icon-theme.override { colorVariants = [ "purple" ]; })
   ];
 }

@@ -26,7 +26,9 @@
     enable = true;
     iconTheme = {
       name = "Colloid-Purple-Dark";
-      package = pkgs.colloid-icon-theme;
+      package = pkgs.colloid-icon-theme.override {
+        colorVariants = [ "purple" ];
+      };
     };
   };
 
