@@ -97,15 +97,13 @@
       programs.hyprland.enable = true;
 
       # Display manager
-      services.greetd = {
+      services.displayManager.sddm = {
         enable = true;
-        settings = {
-          default_session = {
-            command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
-            user = "greeter";
-          };
-        };
+        wayland.enable = true;
+        theme = "chili";
+        settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
       };
+      environment.systemPackages = [ pkgs.sddm-chili-theme ];
 
       # Bluetooth
       hardware.bluetooth.enable = true;
