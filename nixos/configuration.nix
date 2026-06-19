@@ -107,6 +107,7 @@
         theme = "sddm-astronaut-theme";
         extraPackages = with pkgs; [
           kdePackages.qt5compat
+          kdePackages.qtmultimedia
         ];
       };
       environment.systemPackages = [ pkgs.pkgs.sddm-astronaut ];
