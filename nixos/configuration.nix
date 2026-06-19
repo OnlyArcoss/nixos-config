@@ -105,8 +105,10 @@
         enable = true;
         theme = "chili";
       };
-      environment.systemPackages = [ pkgs.sddm-chili-theme libsForQt5.qt5.qtgraphicaleffects ];
-
+      environment.systemPackages = with pkgs; [
+        sddm-chili-theme
+        qt5.qtgraphicaleffects
+      ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
