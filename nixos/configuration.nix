@@ -107,6 +107,10 @@
         };
       };
 
+      # Bluetooth
+      hardware.bluetooth.enable = true;
+      hardware.bluetooth.powerOnBoot = true;
+
       # Audio
       security.rtkit.enable = true;
       services.pipewire = {
