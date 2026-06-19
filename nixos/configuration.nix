@@ -103,10 +103,8 @@
       services.xserver.enable = true;
       services.displayManager.sddm = {
         enable = true;
-        theme = "where_is_my_sddm_theme";
-        settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
+        theme = "elarun";
       };
-      environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
