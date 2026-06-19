@@ -106,10 +106,7 @@
         package = pkgs.kdePackages.sddm;
         theme = "chili";
         extraPackages = with pkgs; [
-          sddm-chili-theme
-          kdePackages.qtsvg
-          kdePackages.qtmultimedia
-          kdePackages.qtvirtualkeyboard
+          where-is-my-sddm-theme
           kdePackages.qt5compat
         ];
       };
