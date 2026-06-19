@@ -100,7 +100,19 @@
       };
 
       # Display manager
-      programs.regreet.enable = true;
+      programs.regreet = {
+        enable = true;
+        settings = {
+          background = {
+            path = toString ../home-manager/wallpapers/minimal_landscape.jpg;
+            fit = "Cover";
+          };
+          GTK = {
+            application_prefer_dark_theme = true;
+            font_name = "JetBrains Mono 12";
+          };
+        };
+      };
       services.greetd = {
         enable = true;
         settings = {
