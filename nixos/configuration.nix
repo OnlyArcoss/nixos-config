@@ -100,19 +100,13 @@
       };
 
       # Display manager
+      services.xserver.enable = true;
       services.displayManager.sddm = {
         enable = true;
-        wayland.enable = true;
-        package = pkgs.kdePackages.sddm;
-        theme = "catppuccin-mocha-mauve";
-        extraPackages = with pkgs; [
-          (catppuccin-sddm.override {
-            flavor = "mocha";
-            accent = "mauve";
-          })
-          kdePackages.qt5compat
-        ];
+        theme = "where_is_my_sddm_theme";
+        settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
       };
+      environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
