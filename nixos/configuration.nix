@@ -106,10 +106,10 @@
         package = pkgs.kdePackages.sddm;
         theme = "catppuccin-mocha-mauve";
         extraPackages = with pkgs; [
-          (catppuccin-sddm.override { flavor = "mocha"; accent = "mauve"; })
           kdePackages.qt5compat
         ];
       };
+      environment.systemPackages = [ pkgs.catppuccin-sddm ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
