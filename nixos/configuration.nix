@@ -100,28 +100,13 @@
       };
 
       # Display manager
-      programs.regreet = {
+      services.xserver.enable = true;
+      services.displayManager.sddm = {
         enable = true;
-        settings = {
-          background = {
-            path = toString ../home-manager/wallpapers/minimal_landscape.jpg;
-            fit = "Cover";
-          };
-          GTK = {
-            application_prefer_dark_theme = true;
-            font_name = lib.mkForce "JetBrains Mono 12";
-          };
-        };
+        theme = "where_is_my_sddm_theme";
+        settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
       };
-      services.greetd = {
-        enable = true;
-        settings = {
-          default_session = {
-            command = "${pkgs.cage}/bin/cage -s -- ${pkgs.regreet}/bin/regreet";
-            user = "greeter";
-          };
-        };
-      };
+      environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
