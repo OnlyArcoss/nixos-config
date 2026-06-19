@@ -105,7 +105,6 @@
         enable = true;
         wayland.enable = true;
         theme = "chili";
-        settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
       };
       environment.systemPackages = [ pkgs.sddm-chili-theme ];
 
