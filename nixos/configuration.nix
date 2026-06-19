@@ -106,6 +106,10 @@
         package = pkgs.kdePackages.sddm;
         theme = "sddm-astronaut-theme";
         extraPackages = with pkgs; [
+          (sddm-astronaut.override {
+            embeddedTheme = "hyprland_kath";
+            themeConfig.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
+          })
           kdePackages.qt5compat
           kdePackages.qtmultimedia
         ];
