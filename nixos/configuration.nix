@@ -110,7 +110,6 @@
           kdePackages.qt5compat
         ];
       };
-      environment.systemPackages = [ pkgs.catppuccin-sddm ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
