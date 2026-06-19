@@ -106,11 +106,14 @@
         package = pkgs.kdePackages.sddm;
         theme = "chili";
         extraPackages = with pkgs; [
-          where-is-my-sddm-theme
+          sddm-chili-theme
+          kdePackages.qtsvg
+          kdePackages.qtmultimedia
+          kdePackages.qtvirtualkeyboard
           kdePackages.qt5compat
         ];
       };
-      environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
+      environment.systemPackages = [ pkgs.sddm-chili-theme ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
