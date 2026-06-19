@@ -109,6 +109,7 @@
           where-is-my-sddm-theme
           kdePackages.qt5compat
         ];
+        settings.General.GreeterEnvironment = "QT_SCREEN_SCALE_FACTORS=1,QT_FONT_DPI=96";
       };
       environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
       # Bluetooth
