@@ -104,16 +104,13 @@
         enable = true;
         wayland.enable = true;
         package = pkgs.kdePackages.sddm;
-        theme = "sddm-astronaut-theme";
+        theme = "catppuccin-mocha-mauve";
         extraPackages = with pkgs; [
-          (sddm-astronaut.override {
-            embeddedTheme = "hyprland_kath";
-            themeConfig.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
-          })
+          (catppuccin-sddm.override { flavor = "mocha"; accent = "mauve"; })
           kdePackages.qt5compat
         ];
-        settings.General.GreeterEnvironment = "QT_SCREEN_SCALE_FACTORS=1,QT_FONT_DPI=96";
       };
+      environment.systemPackages = [ pkgs.catppuccin-sddm ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
