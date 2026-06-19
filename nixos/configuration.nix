@@ -104,7 +104,6 @@
       services.displayManager.sddm = {
         enable = true;
         theme = "where_is_my_sddm_theme";
-        settings.Theme.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
       };
       environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
       # Bluetooth
