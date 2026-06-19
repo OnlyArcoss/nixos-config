@@ -104,17 +104,22 @@
         enable = true;
         wayland.enable = true;
         package = pkgs.kdePackages.sddm;
-        theme = "sddm-astronaut-theme";
-        extraPackages = with pkgs; [
-          (sddm-astronaut.override {
-            embeddedTheme = "hyprland_kath";
-            themeConfig.Background = toString ../home-manager/wallpapers/minimal_landscape.jpg;
-          })
-          kdePackages.qt5compat
-          kdePackages.qtmultimedia
+        theme = "pixie";
+        settings.Theme.CursorTheme = "breeze_cursors";
+        extraPackages = with pkgs.kdePackages; [
+          qtsvg
+          qtdeclarative
+          qt5compat
         ];
       };
-      environment.systemPackages = [ pkgs.pkgs.sddm-astronaut ];
+      environment.systemPackages = [
+        (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
+          background = ../home-manager/wallpapers/minimal_landscape.jpg;
+          autoColor = true;
+          backgroundColor = "#1A1C1E";
+          textColor = "#E2E2E6";
+        })
+      ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;

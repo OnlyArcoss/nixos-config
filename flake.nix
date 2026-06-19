@@ -8,6 +8,9 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # SDDM theme
+    pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
   };
 
   outputs = {
