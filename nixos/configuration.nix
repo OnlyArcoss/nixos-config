@@ -100,11 +100,17 @@
       };
 
       # Display manager
-      services.xserver.enable = true;
       services.displayManager.sddm = {
         enable = true;
-        theme = "elarun";
+        wayland.enable = true;
+        package = pkgs.kdePackages.sddm;
+        theme = "where_is_my_sddm_theme";
+        extraPackages = with pkgs; [
+          where-is-my-sddm-theme
+          kdePackages.qt5compat
+        ];
       };
+      environment.systemPackages = [ pkgs.where-is-my-sddm-theme ];
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
