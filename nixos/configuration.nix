@@ -115,6 +115,7 @@
       environment.systemPackages = [
         (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
           background = ../home-manager/wallpapers/minimal_landscape.jpg;
+          avatar = ../home-manager/assets/pp.jpg;
           autoColor = true;
           backgroundColor = "#1A1C1E";
           textColor = "#E2E2E6";
