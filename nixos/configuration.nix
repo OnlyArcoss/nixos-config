@@ -96,7 +96,7 @@
       # Hyprland
       programs.hyprland = {
         enable = true;
-        # withUWSM = true;
+        withUWSM = true;
       };
 
       # Display manager
