@@ -137,6 +137,7 @@
       xdg.portal = {
         enable = true;
         extraPortals = [pkgs.xdg-desktop-portal-hyprland];
+        config.common.default = "hyprland";
       };
   programs.zsh.enable = true;
   users.users.arcoss.shell = pkgs.zsh;
