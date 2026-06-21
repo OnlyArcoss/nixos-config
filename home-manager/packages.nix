@@ -11,7 +11,6 @@
     btop
     git
     vim
-    bibata-cursors
     impala
     bluetui
     wiremix

@@ -10,6 +10,17 @@
     homeDirectory = "/home/arcoss";
     stateVersion = "25.11";
 
+    pointerCursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 24;
+      gtk.enable = true;
+      hyprcursor = {
+        enable = true;
+        size = 24;
+      };
+    };
+
     file = {
       ".config/hypr/hyprland.lua".source = ./hypr/hyprland.lua;
       ".config/hypr/hyprpaper.conf".source = ./hypr/hyprpaper.conf;
