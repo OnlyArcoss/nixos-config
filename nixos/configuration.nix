@@ -96,31 +96,10 @@
       # Hyprland
       programs.hyprland = {
         enable = true;
-        withUWSM = true;
       };
 
-      # Display manager
-      services.displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-        package = pkgs.kdePackages.sddm;
-        theme = "pixie";
-        settings.Theme.CursorTheme = "breeze_cursors";
-        extraPackages = with pkgs.kdePackages; [
-          qtsvg
-          qtdeclarative
-          qt5compat
-        ];
-      };
-      environment.systemPackages = [
-        (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
-          background = ../home-manager/wallpapers/minimal_landscape.jpg;
-          avatar = ../home-manager/assets/pp.jpg;
-          autoColor = true;
-          backgroundColor = "#1A1C1E";
-          textColor = "#E2E2E6";
-        })
-      ];
+      # Pas de display manager : Hyprland est lancé depuis le TTY1 (voir programs.zsh.profileExtra dans home.nix)
+
       # Bluetooth
       hardware.bluetooth.enable = true;
       hardware.bluetooth.powerOnBoot = true;
