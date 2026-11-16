@@ -50,6 +50,10 @@
     };
   };
 
+  # Agent polkit : fenêtre de mot de passe pour les actions admin des applis graphiques
+  # (polkit lui-même est activé par programs.hyprland côté NixOS)
+  services.hyprpolkitagent.enable = true;
+
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
